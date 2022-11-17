@@ -1,7 +1,6 @@
 package com.bridgelabz;
 
 import org.w3c.dom.Node;
-
 public class LinkedListCode {
     Node head;
     class Node {
