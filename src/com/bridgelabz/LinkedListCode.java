@@ -166,7 +166,7 @@ public class LinkedListCode {
         //obj.insertIndex(2, "Your");
         //obj.deleteFirst();
         //obj.deleteLast();
-        //obj.Search("30");
+        obj.Search("30");
         obj.insertIndex(2, "40");
         obj.Print();
     }
