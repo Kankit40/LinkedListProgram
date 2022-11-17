@@ -136,6 +136,27 @@ public class LinkedListCode {
         secoundLast.next= null;
     }
 
+    // Ability to search
+    public void Search(String Data1) {
+        if (head == null) {                                  // Checking f head is empty or not
+            System.out.println("Linked list is empty...");
+            return;
+        }
+        int check = 0;
+        Node tempNode = head;                                 // Taking temp node
+        while (tempNode != null) {
+            check++;
+            if (tempNode.data == Data1) {
+                System.out.println(" The data is present" + tempNode.data + " at " + check);
+                break;
+            }else {
+                tempNode = tempNode.next;
+            }
+        }
+        if (tempNode == null){
+            System.out.println(" THe data is not present");
+        }
+    }
     public static void main(String[] args) {
         LinkedListCode obj = new LinkedListCode();
 
@@ -145,6 +166,7 @@ public class LinkedListCode {
         obj.insertIndex(2, "Your");
         obj.deleteFirst();
         obj.deleteLast();
+        obj.Search("30");
         obj.Print();
     }
 }
