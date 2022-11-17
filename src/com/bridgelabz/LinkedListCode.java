@@ -157,17 +157,35 @@ public class LinkedListCode {
             System.out.println(" THe data is not present");
         }
     }
+
+    //Ability to delete an element
+    public void delete(Object data) {
+        Node temp = head, prev =null;
+        if (temp != null && temp.data == data) {
+            head = temp.next;
+            return;
+        }
+        while (temp != null && temp.data !=data) {
+            prev= temp;
+            temp = temp.next;
+        }
+        if(temp == null)
+            return;
+        prev.next=temp.next;
+    }
+    
     public static void main(String[] args) {
         LinkedListCode obj = new LinkedListCode();
 
-        obj.addFirst("56");
-        obj.addFirst("30");
-        obj.addFirst("70");
+        obj.addLast("56");
+        obj.addLast("30");
+        obj.addLast("70");
         //obj.insertIndex(2, "Your");
         //obj.deleteFirst();
         //obj.deleteLast();
-        obj.Search("30");
+        obj.Search("40");
         obj.insertIndex(2, "40");
+        obj.delete("40");
         obj.Print();
     }
 }
