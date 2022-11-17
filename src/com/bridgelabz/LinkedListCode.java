@@ -117,6 +117,25 @@ public class LinkedListCode {
         head = head.next;
     }
 
+    // deleting the last element
+    public void deleteLast(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        if(head.next == null){
+            head= null;
+            return;
+        }
+        Node secoundLast = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secoundLast = secoundLast.next;
+        }
+        secoundLast.next= null;
+    }
+
     public static void main(String[] args) {
         LinkedListCode obj = new LinkedListCode();
 
@@ -125,6 +144,7 @@ public class LinkedListCode {
         obj.addFirst("70");
         obj.insertIndex(2, "Your");
         obj.deleteFirst();
+        obj.deleteLast();
         obj.Print();
     }
 }
