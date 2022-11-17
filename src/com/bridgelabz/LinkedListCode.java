@@ -163,10 +163,11 @@ public class LinkedListCode {
         obj.addFirst("56");
         obj.addFirst("30");
         obj.addFirst("70");
-        obj.insertIndex(2, "Your");
-        obj.deleteFirst();
-        obj.deleteLast();
-        obj.Search("30");
+        //obj.insertIndex(2, "Your");
+        //obj.deleteFirst();
+        //obj.deleteLast();
+        //obj.Search("30");
+        obj.insertIndex(2, "40");
         obj.Print();
     }
 }
