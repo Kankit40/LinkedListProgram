@@ -108,6 +108,15 @@ public class LinkedListCode {
         }
     }
 
+    // Deleting the first element
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        head = head.next;
+    }
+
     public static void main(String[] args) {
         LinkedListCode obj = new LinkedListCode();
 
@@ -115,6 +124,7 @@ public class LinkedListCode {
         obj.addFirst("30");
         obj.addFirst("70");
         obj.insertIndex(2, "Your");
+        obj.deleteFirst();
         obj.Print();
     }
 }
